@@ -15,7 +15,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Sonali Mittal | Frontend Developer | Freelancer",
   description: "Hi, I’m Sonali Mittal, a Lead Frontend Developer with 10+ years of experience @  Morgan Stanley Angular 19 | ReactJS | Nodejs | Typescript | Javascript(Es6+) | Tailwind |Docker | Git | CI/CD | Agile | Scrum | Team Leadership | Mentoring | Code Reviews | Performance Optimization | UI/UX Collaboration | Cross-functional Teamwork | Problem Solving | Communication Skills",
-  keywords:"Sonali's portfolio Lead Technical, 10+ year's @  Morgan Stanley Angular 2 - 17 | ReactJS | Vuejs | Nodejs | Typescript | Javascript(Es6+) | Jasmine | SASS | LESS | Tailwind CSS | Webpack | Git | CI/CD | Agile | Scrum | Team Leadership | Mentoring | Code Reviews | Performance Optimization | UI/UX Collaboration | Cross-functional Teamwork | Problem Solving | Communication Skills",
+  keywords: "Sonali's portfolio Lead Technical, 10+ year's @  Morgan Stanley Angular 2 - 17 | ReactJS | Vuejs | Nodejs | Typescript | Javascript(Es6+) | Jasmine | SASS | LESS | Tailwind CSS | Webpack | Git | CI/CD | Agile | Scrum | Team Leadership | Mentoring | Code Reviews | Performance Optimization | UI/UX Collaboration | Cross-functional Teamwork | Problem Solving | Communication Skills",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
