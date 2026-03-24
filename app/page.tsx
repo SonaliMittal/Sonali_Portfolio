@@ -76,7 +76,7 @@ const experienceData = [
   },
   {
     role: "SENIOR FRONT-END/UI DEVELOPER ",
-    company: "Flipkart (Collabera)",
+    company: "Flipkart",
     duration: "June, 2020 – May, 2021",
     description:
       "Worked on the Flipkart Seller Hub, a comprehensive platform that empowers sellers to manage their online businesses effectively. The Seller Hub provides a wide range of tools and features to help sellers optimize their operations, track performance, and grow their sales on the Flipkart marketplace.",
@@ -107,20 +107,35 @@ const educationData = [
 ];
 const certificates = [
   {
-    title: "Software Engineer",
-    platform: "HackerRank",
-    image: "/cert1.jpg",
+    title: "Certified Scrum Product Owner (CSPO)",
+    platform: "Scrum Alliance",
+    image: "/CSPO.jpeg",
   },
   {
-    title: "Frontend Developer - React",
-    platform: "HackerRank",
-    image: "/cert2.jpg",
+    title: "Morgan Stanley Do the Right Thing Award",
+    platform: "Morgan Stanley",
+    image: "/DTRT.jpeg",
   },
   {
-    title: "Angular - Basic",
-    platform: "HackerRank",
-    image: "/cert3.jpg",
+    title: "Mogan Stanley Global Excellence Award",
+    platform: "Morgan Stanley",
+    image: "/GEA.jpeg",
   },
+  {
+    title: "Mogan Stanley Put Clients First Award",
+    platform: "Morgan Stanley",
+    image: "/PCF.jpeg",
+  },
+  {
+    title: "Mogan Stanley Lead With Exceptional Ideas Award",
+    platform: "Morgan Stanley",
+    image: "/LWEI.jpeg",
+  },
+  {
+    title: "Mogan Stanley Global Technology Expo Award",
+    platform: "Morgan Stanley",
+    image: "/GTE.jpeg",
+  }
 ];
 const itemVariant = {
   hidden: { opacity: 0, y: 40 },
@@ -139,7 +154,8 @@ export default function Portfolio() {
           <a href="#experience">EXPERIENCE</a>
           <a href="#education">EDUCATION</a>
           <a href="#certification">CERTIFICATION</a>
-          <a href="#projects">PORTFOLIO</a>
+          {/* <a href="#projects">PORTFOLIO</a> */}
+
         </div>
       </div>
 
@@ -150,7 +166,7 @@ export default function Portfolio() {
           <motion.div initial="hidden" animate="visible" variants={sectionVariant}>
 
             <h1 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-purple-700 to-indigo-600 bg-clip-text text-transparent">
-              I Am Sonali Mittal
+              I Am Sonali Mittal 10+ Years
             </h1>
 
             <p className="mt-4 text-lg text-gray-700 font-medium">
@@ -170,17 +186,17 @@ export default function Portfolio() {
             </p>
 
             <p className="mt-6 text-gray-600 leading-relaxed">
-              I am a frontend developer with experience in building high-performance web applications.
+              I am a frontend developer with 10+ years of experience in building high-performance web applications.
               My core expertise lies in modern JavaScript frameworks, particularly{" "}
               <span className="text-purple-500 font-medium">
-                Angular, React, and Next.js
+                Angular, React, Next.js and Statemanagement libraries like NgRx and Redux Toolkit
               </span>, where I focus on creating scalable, maintainable, and user-friendly interfaces.
             </p>
 
             <p className="mt-4 text-gray-600 leading-relaxed">
               I specialize in developing pixel-perfect, responsive UIs using{" "}
               <span className="text-purple-500 font-medium">
-                HTML5, CSS3, Tailwind, and TypeScript
+                HTML5, CSS3, Tailwind,JavaScript(ES6+) and TypeScript
               </span>, ensuring seamless user experiences across devices.
             </p>
 
@@ -218,17 +234,18 @@ export default function Portfolio() {
                   <FaGithub className="text-white bg-gray-800 p-2 w-10 h-10 rounded-md" />
                 </a>
 
-                <a href="https://instagram.com" target="_blank">
+                {/* <a href="https://instagram.com" target="_blank">
                   <FaInstagram className="text-white bg-pink-500 p-2 w-10 h-10 rounded-md" />
-                </a>
+                </a> */}
 
-                <a href="mailto:mittal.sonali221@gmail.com">
-                  <MdEmail className="text-white bg-gray-600 p-2 w-10 h-10 rounded-md" />
-                </a>
                 <a
-                  href="https://wa.me/917848042015" target="_blank"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=mittal.sonali221@gmail.com"
+                  target="_blank"
                   rel="noopener noreferrer"
                 >
+                  <MdEmail className="text-white bg-gray-600 p-2 w-10 h-10 rounded-md hover:scale-110 transition" />
+                </a>
+                <a href="https://wa.me/917848042015" target="_blank" rel="noopener noreferrer">
                   <FaWhatsapp className="text-white bg-green-500 p-2 w-10 h-10 rounded-md hover:scale-110 transition" />
                 </a>
               </div>
@@ -426,11 +443,15 @@ export default function Portfolio() {
         <h2 className="text-3xl font-bold mb-12">
           Certification<span className="text-purple-500">.</span>
         </h2>
+        <p className="mt-2 mb-4 text-gray-600 leading-relaxed max-w-2xl">
+          Throughout my life, I have been motivated by a deep conviction that education holds great significance. I make it a point to acquire new knowledge every day.
+        </p>
+
+
 
         {/* TOP GRID */}
-        <div className="grid md:grid-cols-2 gap-10 mb-16">
+        {/* <div className="grid md:grid-cols-2 gap-10 mb-16">
 
-          {/* LEFT */}
           <div>
             <h3 className="text-purple-600 font-semibold mb-4">
               VIT University Certification
@@ -445,7 +466,6 @@ export default function Portfolio() {
             <div className="border-b mt-6"></div>
           </div>
 
-          {/* RIGHT */}
           <div>
             <h3 className="text-purple-600 font-semibold mb-4">
               VIT University Awards
@@ -459,29 +479,7 @@ export default function Portfolio() {
             <div className="border-b mt-6"></div>
           </div>
 
-          {/* LEFT BOTTOM */}
-          <div>
-            <h3 className="text-purple-600 font-semibold mb-4">
-              Front End Development Training
-            </h3>
-
-            <p className="text-gray-600">
-              HTML5 & CSS3 training by Naresh Technologies, Hyderabad.
-            </p>
-          </div>
-
-          {/* RIGHT BOTTOM */}
-          <div>
-            <h3 className="text-purple-600 font-semibold mb-4">
-              Back End Development Training
-            </h3>
-
-            <p className="text-gray-600">
-              PHP with MySQL training by Naresh Technologies, Hyderabad.
-            </p>
-          </div>
-
-        </div>
+        </div> */}
 
         {/* CERTIFICATE CARDS */}
         <div className="grid md:grid-cols-3 gap-6">
@@ -501,7 +499,7 @@ export default function Portfolio() {
               <div className="p-4">
                 <h4 className="font-semibold flex items-center gap-2">
                   {cert.title}
-                  <span className="text-purple-500">↗</span>
+                  {/* <span className="text-purple-500">↗</span> */}
                 </h4>
 
                 <p className="text-sm text-gray-500 mt-1">
@@ -515,7 +513,7 @@ export default function Portfolio() {
       </motion.section>
 
       {/* Projects */}
-      <motion.section
+      {/* <motion.section
         id="projects"
         className="py-24 max-w-6xl mx-auto px-6"
         initial="hidden"
@@ -532,7 +530,7 @@ export default function Portfolio() {
             </div>
           ))}
         </div>
-      </motion.section>
+      </motion.section> */}
 
     </div>
   );
