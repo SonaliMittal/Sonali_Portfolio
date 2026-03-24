@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub, FaWhatsapp, FaInstagram } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -142,21 +142,57 @@ const itemVariant = {
   visible: { opacity: 1, y: 0 },
 };
 export default function Portfolio() {
+  const [open, setOpen] = useState(false);
   return (
     <div className="bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] text-black font-sans">
 
       {/* Navbar */}
-      <div className="fixed top-0 w-full flex justify-between px-10 py-4 border-b bg-white/80 backdrop-blur z-50">
-        <h1 className="font-bold text-lg">Sonali Mittal.</h1>
-        <div className="flex gap-8 text-sm tracking-wide">
-          <a href="#about">ABOUT ME</a>
-          <a href="#skills">SKILLS</a>
-          <a href="#experience">EXPERIENCE</a>
-          <a href="#education">EDUCATION</a>
-          <a href="#certification">CERTIFICATION</a>
-          {/* <a href="#projects">PORTFOLIO</a> */}
+      <div className="fixed top-0 w-full z-50 border-b bg-white/80 dark:bg-gray-900/80 backdrop-blur">
+
+        <div className="flex justify-between items-center px-6 md:px-10 py-4 max-w-7xl mx-auto">
+
+          {/* Logo */}
+          <h1 className="font-bold text-lg">Sonali Mittal.</h1>
+
+          {/* Desktop Menu */}
+          <div className="hidden md:flex gap-8 text-sm tracking-wide">
+            <a href="#about" className="hover:text-purple-600 transition">ABOUT ME</a>
+            <a href="#skills" className="hover:text-purple-600 transition">SKILLS</a>
+            <a href="#experience" className="hover:text-purple-600 transition">EXPERIENCE</a>
+            <a href="#education" className="hover:text-purple-600 transition">EDUCATION</a>
+            <a href="#certification" className="hover:text-purple-600 transition">CERTIFICATION</a>
+            <a href="#projects" className="hover:text-purple-600 transition">PORTFOLIO</a>
+          </div>
+
+          {/* Hamburger */}
+          <button
+            className="md:hidden flex flex-col gap-1"
+            onClick={() => setOpen(!open)}
+          >
+            <span className={`w-6 h-[2px] bg-black dark:bg-white transition ${open ? "rotate-45 translate-y-2" : ""}`} />
+            <span className={`w-6 h-[2px] bg-black dark:bg-white transition ${open ? "opacity-0" : ""}`} />
+            <span className={`w-6 h-[2px] bg-black dark:bg-white transition ${open ? "-rotate-45 -translate-y-2" : ""}`} />
+          </button>
 
         </div>
+
+        {/* Mobile Menu */}
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+            }`}
+        >
+          <div className="flex flex-col gap-4 px-6 pb-6 text-sm bg-white dark:bg-gray-900 border-t">
+
+            <a href="#about" onClick={() => setOpen(false)}>ABOUT ME</a>
+            <a href="#skills" onClick={() => setOpen(false)}>SKILLS</a>
+            <a href="#experience" onClick={() => setOpen(false)}>EXPERIENCE</a>
+            <a href="#education" onClick={() => setOpen(false)}>EDUCATION</a>
+            <a href="#certification" onClick={() => setOpen(false)}>CERTIFICATION</a>
+            <a href="#projects" onClick={() => setOpen(false)}>PORTFOLIO</a>
+
+          </div>
+        </div>
+
       </div>
 
       {/* about */}
