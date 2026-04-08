@@ -266,7 +266,7 @@ export default function Portfolio() {
                   <FaLinkedin className="text-white bg-purple-500 p-2 w-10 h-10 rounded-md" />
                 </a>
 
-                <a href="https://github.com/SonaliMittal?tab=repositories" target="_blank">
+                <a href="https://github.com/SonaliMittal" target="_blank">
                   <FaGithub className="text-white bg-gray-800 p-2 w-10 h-10 rounded-md" />
                 </a>
 
